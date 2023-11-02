@@ -1,14 +1,17 @@
 // Login.js
 import React from 'react';
-import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+// redirect doesn't work well.
 
 const Login = ({ setLoggedIn, loggedIn }) => {
+    const navigate = useNavigate();
     const login = () => {
         setLoggedIn(true);
     };
 
     if (loggedIn) {
-        return redirect('/dashboard');
+        navigate("/dashboard");
+        
     }
 
     return (

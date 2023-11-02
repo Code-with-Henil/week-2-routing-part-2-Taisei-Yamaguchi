@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login setLoggedIn={setLoggedIn} loggedIn={loggedIn} />}/>
-        <Route path="/dashboard" element={<Dashboard />}/> 
+        <Route path="/dashboard" element={<Dashboard loggedIn={loggedIn}/>}/> 
       </Routes>
     </BrowserRouter>
     
